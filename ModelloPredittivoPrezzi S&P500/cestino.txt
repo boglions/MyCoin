@@ -1,0 +1,35 @@
+self.dataframe_train = self.__oridna_crescente(dataset=self.dataframe_train, train=True)
+self.dataframe_train = self.__converti_tipologia_dati(dataset=self.dataframe_train, name_dataset='dataframe_train')
+self.dataframe_train = self.__crea_serie_temporale(dataset=self.dataframe_train, name_dataset='dataframe_train')
+
+self.dataframe_validation = self.__oridna_crescente(dataset=self.dataframe_validation)
+self.dataframe_validation = self.__converti_tipologia_dati(dataset=self.dataframe_validation, name_dataset='dataframe_validation')
+self.dataframe_validation = self.__crea_serie_temporale(dataset=self.dataframe_validation, name_dataset='dataframe_validation')
+
+self.dataframe_test = self.__oridna_crescente(dataset=self.dataframe_test)
+self.dataframe_test = self.__converti_tipologia_dati(dataset=self.dataframe_test, name_dataset='dataframe_test')
+self.dataframe_test = self.__crea_serie_temporale(dataset=self.dataframe_test, name_dataset='dataframe_test')
+
+self.__normalizza_dati()
+self.__prepara_dataset_train()
+self.__prepara_dataset_validation()
+self.__prepara_dataset_test()
+
+
+    def __crea_modello(self):
+        try:
+            self.model = keras.models.Sequential()  # istanziazione modello sequenziale
+            self.model.add(keras.layers.GRU(units=64, return_sequences=True, input_shape=(1, 4)))
+            # 200 numero neuroni
+            # dropout=0.3: vengono spenti il 30% dei pesi per evitare l'overfitting. (regolarizzazione)
+            # return_sequences=True: restituisce l'output del neurone al neurone successivo
+            # input_shape(): 1 numero di passaggi temporali
+            # 4 numero di caratteristiche per ogni passaggio temporale (features)
+            self.model.add(keras.layers.Dropout(0.2))
+            self.model.add(keras.layers.GRU(units=64, return_sequences=True))
+            self.model.add(keras.layers.Dropout(0.2))
+            self.model.add(keras.layers.GRU(units=64))
+            self.model.add(keras.layers.Dropout(0.2))
+            self.model.add(keras.layers.Dense(units=1, activation='linear'))  # layer con numero di neuroni = output attesi
+        except:
+            self.log.error('errore: ', exc_info=True)

@@ -1,0 +1,2060 @@
+2023-11-28 22:01:15,404 ERROR ElaborazioneDati.py line+78 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "lib.pyx", line 2368, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "1990-01-02"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 71, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\tools\numeric.py", line 222, in to_numeric
+    values, new_mask = lib.maybe_convert_numeric(  # type: ignore[call-overload]  # noqa: E501
+  File "lib.pyx", line 2410, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "1990-01-02" at position 0
+2023-11-28 22:01:15,405 ERROR ElaborazioneDati.py line+103 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 86, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:01:15,409 ERROR ElaborazioneDati.py line+78 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "lib.pyx", line 2368, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "2018-01-03"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 71, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\tools\numeric.py", line 222, in to_numeric
+    values, new_mask = lib.maybe_convert_numeric(  # type: ignore[call-overload]  # noqa: E501
+  File "lib.pyx", line 2410, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "2018-01-03" at position 0
+2023-11-28 22:01:15,410 ERROR ElaborazioneDati.py line+103 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 86, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:01:15,411 ERROR ElaborazioneDati.py line+78 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "lib.pyx", line 2368, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "2020-01-06"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 71, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\tools\numeric.py", line 222, in to_numeric
+    values, new_mask = lib.maybe_convert_numeric(  # type: ignore[call-overload]  # noqa: E501
+  File "lib.pyx", line 2410, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "2020-01-06" at position 0
+2023-11-28 22:01:15,411 ERROR ElaborazioneDati.py line+103 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 86, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:01:15,411 ERROR ElaborazioneDati.py line+202 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 180, in __normalizza_dati
+    self.normalizzatore.fit(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 435, in fit
+    return self.partial_fit(X, y)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 473, in partial_fit
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 930, in check_array
+    raise ValueError(
+ValueError: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2023-11-28 22:11:50,801 ERROR ElaborazioneDati.py line+66 __oridna_crescente [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 63, in __oridna_crescente
+    self.trova_max_min()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 69, in trova_max_min
+    massimo = self.dataframe_train.stack().max()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\series.py", line 6189, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 11968, in max
+    return self._stat_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 11941, in _stat_function
+    return self._reduce(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\series.py", line 6129, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\nanops.py", line 1092, in reduction
+    result = getattr(values, meth)(axis)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\numpy\core\_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+TypeError: '>=' not supported between instances of 'Timestamp' and 'int'
+2023-11-28 22:11:50,811 ERROR ElaborazioneDati.py line+87 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 80, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+TypeError: 'NoneType' object is not subscriptable
+2023-11-28 22:11:50,811 ERROR ElaborazioneDati.py line+112 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 95, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:11:50,815 ERROR ElaborazioneDati.py line+66 __oridna_crescente [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 63, in __oridna_crescente
+    self.trova_max_min()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 69, in trova_max_min
+    massimo = self.dataframe_train.stack().max()
+AttributeError: 'NoneType' object has no attribute 'stack'
+2023-11-28 22:11:50,815 ERROR ElaborazioneDati.py line+87 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 80, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+TypeError: 'NoneType' object is not subscriptable
+2023-11-28 22:11:50,815 ERROR ElaborazioneDati.py line+112 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 95, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:11:50,817 ERROR ElaborazioneDati.py line+66 __oridna_crescente [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 63, in __oridna_crescente
+    self.trova_max_min()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 69, in trova_max_min
+    massimo = self.dataframe_train.stack().max()
+AttributeError: 'NoneType' object has no attribute 'stack'
+2023-11-28 22:11:50,818 ERROR ElaborazioneDati.py line+87 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 80, in __converti_tipologia_dati
+    dataset['Data'] = pd.to_numeric(dataset['Data'], downcast='float')  # converte la colonna data
+TypeError: 'NoneType' object is not subscriptable
+2023-11-28 22:11:50,818 ERROR ElaborazioneDati.py line+112 __crea_serie_temporale [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 95, in __crea_serie_temporale
+    serie_temporale = dataset.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-28 22:11:50,818 ERROR ElaborazioneDati.py line+204 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 189, in __normalizza_dati
+    self.normalizzatore.fit(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 435, in fit
+    return self.partial_fit(X, y)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 473, in partial_fit
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 930, in check_array
+    raise ValueError(
+ValueError: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2023-11-28 22:12:55,135 ERROR ElaborazioneDati.py line+136 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 124, in __prepara_dataset_train
+    X = X.reshape(7056, 1,
+ValueError: cannot reshape array of size 7057 into shape (7056,1,1)
+2023-11-28 22:12:55,135 ERROR ElaborazioneDati.py line+157 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 146, in __prepara_dataset_validation
+    X = X.reshape(503, 1, 1)  # Num di campioni: 504-1 Num di passaggi temporali: 1 Num di caratteristiche: 1
+ValueError: cannot reshape array of size 504 into shape (503,1,1)
+2023-11-28 22:12:55,135 ERROR ElaborazioneDati.py line+178 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 167, in __prepara_dataset_test
+    X = X.reshape(251, 1, 1)  # Num di campioni: 252-1 Num di passaggi temporali: 1 Num di caratteristiche: 1
+ValueError: cannot reshape array of size 252 into shape (251,1,1)
+2023-11-28 22:41:32,580 ERROR ElaborazioneDati.py line+135 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 117, in __prepara_dataset_train
+    X = self.dataframe_train.iloc[:, 0, 2, 3, 4]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 936, in _validate_tuple_indexer
+    key = self._validate_key_length(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 975, in _validate_key_length
+    raise IndexingError("Too many indexers")
+pandas.errors.IndexingError: Too many indexers
+2023-11-28 22:41:32,581 ERROR ElaborazioneDati.py line+156 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 139, in __prepara_dataset_validation
+    X = self.dataframe_validation.iloc[:, 0, 2, 3, 4]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 936, in _validate_tuple_indexer
+    key = self._validate_key_length(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 975, in _validate_key_length
+    raise IndexingError("Too many indexers")
+pandas.errors.IndexingError: Too many indexers
+2023-11-28 22:41:32,583 ERROR ElaborazioneDati.py line+177 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 160, in __prepara_dataset_test
+    X = self.dataframe_test.iloc[:, 0, 2, 3, 4]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 936, in _validate_tuple_indexer
+    key = self._validate_key_length(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 975, in _validate_key_length
+    raise IndexingError("Too many indexers")
+pandas.errors.IndexingError: Too many indexers
+2023-11-28 22:41:32,943 ERROR ReteNeurale.py line+52 __crea_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 45, in __crea_modello
+    self.model.keras.layers.Dropout(0.4)
+AttributeError: 'Sequential' object has no attribute 'keras'
+2023-11-28 22:41:33,090 ERROR ReteNeurale.py line+64 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 58, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_fileudhj4r1u.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-28 22:41:33,152 ERROR ReteNeurale.py line+74 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 68, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_file3oem7fcf.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-28 22:46:36,726 ERROR ElaborazioneDati.py line+135 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 117, in __prepara_dataset_train
+    X = self.dataframe_train.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-28 22:46:36,727 ERROR ElaborazioneDati.py line+156 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 139, in __prepara_dataset_validation
+    X = self.dataframe_validation.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-28 22:46:36,728 ERROR ElaborazioneDati.py line+177 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 160, in __prepara_dataset_test
+    X = self.dataframe_test.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-28 22:46:37,316 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filew2cohhw5.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-28 22:46:37,380 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filej79bvnm6.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:33:58,824 ERROR ElaborazioneDati.py line+135 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 117, in __prepara_dataset_train
+    X = self.dataframe_train.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-29 14:33:58,825 ERROR ElaborazioneDati.py line+156 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 139, in __prepara_dataset_validation
+    X = self.dataframe_validation.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-29 14:33:58,825 ERROR ElaborazioneDati.py line+177 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 160, in __prepara_dataset_test
+    X = self.dataframe_test.iloc[:, [0, 2, 3, 4]]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1147, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1652, in _getitem_tuple
+    tup = self._validate_tuple_indexer(tup)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 940, in _validate_tuple_indexer
+    self._validate_key(k, i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexing.py", line 1574, in _validate_key
+    raise IndexError("positional indexers are out-of-bounds")
+IndexError: positional indexers are out-of-bounds
+2023-11-29 14:33:59,715 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_file35fmggl_.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-29 14:33:59,812 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filepe3rhbdw.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:42:24,068 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7057, 1,
+ValueError: cannot reshape array of size 28108 into shape (7057,1,4)
+2023-11-29 14:42:24,068 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(504, 1, 4)  # Num di campioni: 505-1 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (504,1,4)
+2023-11-29 14:42:24,069 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(252, 1, 4)  # Num di campioni: 253-1 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (252,1,4)
+2023-11-29 14:42:24,661 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filezt0fmqco.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-29 14:42:24,723 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_file_uq4qbig.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:50:48,171 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_file8k78v6w2.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-29 14:50:48,231 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filefblf4hft.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:53:00,145 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 14:53:00,146 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 14:53:00,146 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 14:53:00,772 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filevcziregq.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-29 14:53:00,839 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_file8924kb13.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:55:19,315 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 14:55:19,316 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 14:55:19,316 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 14:55:19,957 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filea1_0nud4.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=True
+      • mask=None
+
+2023-11-29 14:55:20,026 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filedk6dcpf8.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'sequential' (type Sequential).
+    
+    Input 0 of layer "gru" is incompatible with the layer: expected shape=(None, None, 4), found shape=(None, 1, 1)
+    
+    Call arguments received by layer 'sequential' (type Sequential):
+      • inputs=tf.Tensor(shape=(None, 1, 1), dtype=float64)
+      • training=False
+      • mask=None
+
+2023-11-29 14:56:33,799 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 165, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 14:56:33,804 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 188, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 14:56:33,808 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 210, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 14:57:35,717 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 159, in __prepara_dataset_train
+    print(self.dataframe_train.size())
+TypeError: 'int' object is not callable
+2023-11-29 14:57:35,717 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 182, in __prepara_dataset_validation
+    print(self.dataframe_validation.size())
+TypeError: 'int' object is not callable
+2023-11-29 14:57:35,718 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 204, in __prepara_dataset_test
+    print(self.dataframe_test.size())
+TypeError: 'int' object is not callable
+2023-11-29 14:57:50,991 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 159, in __prepara_dataset_train
+    print(self.dataframe_train.size())
+TypeError: 'int' object is not callable
+2023-11-29 14:57:50,992 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 182, in __prepara_dataset_validation
+    print(self.dataframe_validation.size())
+TypeError: 'int' object is not callable
+2023-11-29 14:57:50,992 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 204, in __prepara_dataset_test
+    print(self.dataframe_test.size())
+TypeError: 'int' object is not callable
+2023-11-29 15:02:31,258 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 165, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:02:31,259 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 188, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:02:31,259 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 210, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:09:31,824 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 165, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:09:31,828 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 188, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:09:31,832 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 210, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:12:34,829 ERROR ElaborazioneDati.py line+177 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 165, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:12:34,833 ERROR ElaborazioneDati.py line+199 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 188, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:12:34,837 ERROR ElaborazioneDati.py line+221 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 210, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:14:58,538 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 158, in __prepara_dataset_train
+    print(X.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:14:58,539 ERROR ElaborazioneDati.py line+198 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 181, in __prepara_dataset_validation
+    print(X.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:14:58,539 ERROR ElaborazioneDati.py line+220 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 203, in __prepara_dataset_test
+    print(X.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:17:35,305 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 157, in __prepara_dataset_train
+    print(self.dataframe_train.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:17:35,305 ERROR ElaborazioneDati.py line+198 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 180, in __prepara_dataset_validation
+    print(self.dataframe_validation.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:17:35,305 ERROR ElaborazioneDati.py line+220 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 202, in __prepara_dataset_test
+    print(self.dataframe_test.shape())
+TypeError: 'tuple' object is not callable
+2023-11-29 15:30:14,102 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:30:14,102 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:30:14,103 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:34:15,210 ERROR ElaborazioneDati.py line+175 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 163, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:34:15,211 ERROR ElaborazioneDati.py line+196 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 185, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:34:15,212 ERROR ElaborazioneDati.py line+217 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 206, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:37:21,417 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 157, in __prepara_dataset_train
+    self.dataframe_test = self.dataframe_train.reshape(7026,5)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'reshape'
+2023-11-29 15:37:21,422 ERROR ElaborazioneDati.py line+198 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 180, in __prepara_dataset_validation
+    self.dataframe_validation = self.dataframe_validation.reshape(473, 5)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'reshape'
+2023-11-29 15:37:21,423 ERROR ElaborazioneDati.py line+220 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 202, in __prepara_dataset_test
+    self.dataframe_test = self.dataframe_test.reshape(221, 5)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'reshape'
+2023-11-29 15:39:57,178 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:39:57,178 ERROR ElaborazioneDati.py line+198 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 187, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:39:57,179 ERROR ElaborazioneDati.py line+220 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 209, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:43:14,621 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7026, 1,
+ValueError: cannot reshape array of size 28108 into shape (7026,1,4)
+2023-11-29 15:43:14,621 ERROR ElaborazioneDati.py line+198 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 187, in __prepara_dataset_validation
+    X = X.reshape(473, 1, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (473,1,4)
+2023-11-29 15:43:14,622 ERROR ElaborazioneDati.py line+220 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 209, in __prepara_dataset_test
+    X = X.reshape(221, 1, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (221,1,4)
+2023-11-29 15:48:14,573 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(1, 7026,
+ValueError: cannot reshape array of size 28108 into shape (1,7026,4)
+2023-11-29 15:48:14,573 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(1, 473, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (1,473,4)
+2023-11-29 15:48:14,574 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(1, 221, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (1,221,4)
+2023-11-29 15:48:41,449 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(1, 7026,
+ValueError: cannot reshape array of size 28108 into shape (1,7026,4)
+2023-11-29 15:48:41,449 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(1, 473, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (1,473,4)
+2023-11-29 15:48:41,450 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(1, 221, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (1,221,4)
+2023-11-29 15:49:20,161 ERROR ElaborazioneDati.py line+197 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 186, in __prepara_dataset_validation
+    X = X.reshape(1, 473, 4)  # Num di campioni: 473 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 1896 into shape (1,473,4)
+2023-11-29 15:49:20,162 ERROR ElaborazioneDati.py line+218 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 207, in __prepara_dataset_test
+    X = X.reshape(1, 221, 4)  # Num di campioni: 221 Num di passaggi temporali: 1 Num di caratteristiche: 4
+ValueError: cannot reshape array of size 888 into shape (1,221,4)
+2023-11-29 15:50:57,767 ERROR ReteNeurale.py line+63 __allena_modello [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 57, in __allena_modello
+    self.model.fit(self.xtrain, self.ytrain, validation_data=(self.xvalidation, self.yvalidation), epochs=2,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filelv5pohm6.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1401, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1384, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1373, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1150, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 1, 4), found shape=(None, 7027, 4)
+
+2023-11-29 15:50:57,831 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 67, in __valutazione
+    ris = self.model.evaluate(self.xtest,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\AppData\Local\Temp\__autograph_generated_filema91y8t4.py", line 15, in tf__test_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2066, in test_function  *
+        return step_function(self, iterator)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2049, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 2037, in run_step  **
+        outputs = model.test_step(data)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 1917, in test_step
+        y_pred = self(x, training=False)
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 1, 4), found shape=(None, 222, 4)
+
+2023-11-29 15:53:09,841 ERROR ReteNeurale.py line+73 __valutazione [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 69, in __valutazione
+    with open('risorse/test del modello/dati_test.txt', 'w') as f:  # salva i risultati su file
+FileNotFoundError: [Errno 2] No such file or directory: 'risorse/test del modello/dati_test.txt'
+2023-11-29 16:09:52,953 ERROR GestioneDatiPredizioni.py line+19 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\compat\_optional.py", line 132, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'openpyxl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 14, in __init__
+    self.dataset = pd.read_excel('risorse/dataset/dati da predire.xlsx')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_base.py", line 504, in read_excel
+    io = ExcelFile(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_base.py", line 1580, in __init__
+    self._reader = self._engines[engine](
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_openpyxl.py", line 552, in __init__
+    import_optional_dependency("openpyxl")
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\compat\_optional.py", line 135, in import_optional_dependency
+    raise ImportError(msg)
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2023-11-29 16:10:51,299 ERROR GestioneDatiPredizioni.py line+53 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\ops\array_ops.py", line 220, in _na_arithmetic_op
+    result = func(left, right)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\computation\expressions.py", line 242, in evaluate
+    return _evaluate(op, op_str, a, b)  # type: ignore[misc]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\computation\expressions.py", line 73, in _evaluate_standard
+    return op(a, b)
+TypeError: unsupported operand type(s) for -: 'str' and 'float'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 48, in __normalizza_dati
+    self.dataset = (self.dataset - minimo) / (massimo - minimo) * (new_max - new_min) + new_min
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+    return method(self, other)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\arraylike.py", line 194, in __sub__
+    return self._arith_method(other, operator.sub)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 7644, in _arith_method
+    new_data = self._dispatch_frame_op(other, op, axis=axis)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 7676, in _dispatch_frame_op
+    bm = self._mgr.apply(array_op, right=right)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\internals\managers.py", line 352, in apply
+    applied = b.apply(f, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\internals\blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\ops\array_ops.py", line 285, in arithmetic_op
+    res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\ops\array_ops.py", line 229, in _na_arithmetic_op
+    result = _masked_arith_op(left, right, op)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\ops\array_ops.py", line 184, in _masked_arith_op
+    result[mask] = op(xrav[mask], y)
+TypeError: unsupported operand type(s) for -: 'str' and 'float'
+2023-11-29 16:10:51,322 ERROR GestioneDatiPredizioni.py line+65 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 60, in __prepara_dataset_predictions
+    predict = tf.convert_to_tensor(V, dtype=tf.float64)  # converte l'array NumPy 3D in un tensore TensorFlow 3D
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\constant_op.py", line 103, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+ValueError: could not convert string to float: '4.443,95\t'
+2023-11-29 16:24:57,155 ERROR GestioneDatiPredizioni.py line+50 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 45, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 580, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 507, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Ultimo
+
+2023-11-29 16:24:57,180 ERROR GestioneDatiPredizioni.py line+62 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 57, in __prepara_dataset_predictions
+    predict = tf.convert_to_tensor(V, dtype=tf.float64)  # converte l'array NumPy 3D in un tensore TensorFlow 3D
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\constant_op.py", line 103, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+ValueError: could not convert string to float: '4.443,95\t'
+2023-11-29 16:25:06,092 ERROR GestioneDatiPredizioni.py line+69 get_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 66, in get_dataset_predictions
+    predict_str = tf.io.read_file(filename='risorse/dataset/dataset_predictions.dataset')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\io_ops.py", line 134, in read_file
+    return gen_io_ops.read_file(filename, name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 583, in read_file
+    return read_file_eager_fallback(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 606, in read_file_eager_fallback
+    _result = _execute.execute(b"ReadFile", 1, inputs=_inputs_flat,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.NotFoundError: {{function_node __wrapped__ReadFile_device_/job:localhost/replica:0/task:0/device:CPU:0}} NewRandomAccessFile failed to Create/Open: risorse/dataset/dataset_predictions.dataset : Impossibile trovare il file specificato.
+; No such file or directory [Op:ReadFile]
+2023-11-29 16:25:09,912 ERROR GestioneDatiPredizioni.py line+69 get_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 66, in get_dataset_predictions
+    predict_str = tf.io.read_file(filename='risorse/dataset/dataset_predictions.dataset')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\io_ops.py", line 134, in read_file
+    return gen_io_ops.read_file(filename, name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 583, in read_file
+    return read_file_eager_fallback(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 606, in read_file_eager_fallback
+    _result = _execute.execute(b"ReadFile", 1, inputs=_inputs_flat,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.NotFoundError: {{function_node __wrapped__ReadFile_device_/job:localhost/replica:0/task:0/device:CPU:0}} NewRandomAccessFile failed to Create/Open: risorse/dataset/dataset_predictions.dataset : Impossibile trovare il file specificato.
+; No such file or directory [Op:ReadFile]
+2023-11-29 16:25:11,693 ERROR GestioneDatiPredizioni.py line+69 get_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 66, in get_dataset_predictions
+    predict_str = tf.io.read_file(filename='risorse/dataset/dataset_predictions.dataset')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\io_ops.py", line 134, in read_file
+    return gen_io_ops.read_file(filename, name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 583, in read_file
+    return read_file_eager_fallback(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gen_io_ops.py", line 606, in read_file_eager_fallback
+    _result = _execute.execute(b"ReadFile", 1, inputs=_inputs_flat,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.NotFoundError: {{function_node __wrapped__ReadFile_device_/job:localhost/replica:0/task:0/device:CPU:0}} NewRandomAccessFile failed to Create/Open: risorse/dataset/dataset_predictions.dataset : Impossibile trovare il file specificato.
+; No such file or directory [Op:ReadFile]
+2023-11-29 16:30:34,812 ERROR GestioneDatiPredizioni.py line+51 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 45, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 915, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_array_api.py", line 380, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: '4.457,49\t'
+2023-11-29 16:30:34,815 ERROR GestioneDatiPredizioni.py line+63 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 56, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 16:32:24,637 ERROR GestioneDatiPredizioni.py line+51 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 45, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 915, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_array_api.py", line 380, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: '4.457,49\t'
+2023-11-29 16:32:24,640 ERROR GestioneDatiPredizioni.py line+63 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 56, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 16:35:24,116 ERROR GestioneDatiPredizioni.py line+42 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "lib.pyx", line 2368, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "4.457,49	"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 37, in __converti_tipologia_dati
+    self.dataset['20_giorni_precedenti_Ultimo'] = pd.to_numeric(self.dataset['20_giorni_precedenti_Ultimo'], downcast='float')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\tools\numeric.py", line 222, in to_numeric
+    values, new_mask = lib.maybe_convert_numeric(  # type: ignore[call-overload]  # noqa: E501
+  File "lib.pyx", line 2410, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "4.457,49	" at position 0
+2023-11-29 16:35:24,134 ERROR GestioneDatiPredizioni.py line+55 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 49, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 915, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_array_api.py", line 380, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: '4.457,49\t'
+2023-11-29 16:35:24,136 ERROR GestioneDatiPredizioni.py line+67 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 60, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 16:38:05,197 ERROR GestioneDatiPredizioni.py line+42 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "lib.pyx", line 2368, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "4457,49	"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 37, in __converti_tipologia_dati
+    self.dataset['20_giorni_precedenti_Ultimo'] = pd.to_numeric(self.dataset['20_giorni_precedenti_Ultimo'], downcast='float')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\tools\numeric.py", line 222, in to_numeric
+    values, new_mask = lib.maybe_convert_numeric(  # type: ignore[call-overload]  # noqa: E501
+  File "lib.pyx", line 2410, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "4457,49	" at position 0
+2023-11-29 16:38:05,199 ERROR GestioneDatiPredizioni.py line+55 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 49, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 915, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_array_api.py", line 380, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: '4457,49\t'
+2023-11-29 16:38:05,202 ERROR GestioneDatiPredizioni.py line+67 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 60, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:11:29,931 ERROR ElaborazioneDati.py line+175 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 163, in __prepara_dataset_train
+    X = X.reshape(7027, 1,
+ValueError: cannot reshape array of size 28604 into shape (7027,1,4)
+2023-11-29 17:12:38,866 ERROR ElaborazioneDati.py line+176 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 164, in __prepara_dataset_train
+    X = X.reshape(7027, 1,
+ValueError: cannot reshape array of size 28604 into shape (7027,1,4)
+2023-11-29 17:12:48,895 ERROR ReteNeurale.py line+22 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 19, in __init__
+    self.salva_modello()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 76, in salva_modello
+    self.model.save('risorse/modello/model')  # salva il modello completo su file con estensione prefendita keras
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 3103, in save
+    saving_api.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\saving_api.py", line 167, in save_model
+    return legacy_sm_saving_lib.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\save.py", line 168, in save_model
+    saved_model_save.save(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save.py", line 98, in save
+    saved_nodes, node_paths = save_lib.save_and_return_nodes(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1371, in save_and_return_nodes
+    _build_meta_graph(obj, signatures, options, meta_graph_def))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1584, in _build_meta_graph
+    return _build_meta_graph_impl(obj, signatures, options, meta_graph_def)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1509, in _build_meta_graph_impl
+    asset_info, exported_graph = _fill_meta_graph_def(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 878, in _fill_meta_graph_def
+    object_map, tensor_map, asset_info = saveable_view.map_resources()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 420, in map_resources
+    tensors = obj._export_to_saved_model_graph(  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1732, in _export_to_saved_model_graph
+    self.add_to_graph()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1553, in add_to_graph
+    g._add_function_recursive(self._delayed_rewrite_functions.forward())  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 2477, in _add_function_recursive
+    self._add_function(f)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 2516, in _add_function
+    if self._graph_def_versions.min_consumer < 12:
+KeyboardInterrupt
+2023-11-29 17:31:46,172 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:31:46,172 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:31:46,172 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:31:46,172 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:34:08,972 ERROR GestioneDatiPredizioni.py line+22 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 17, in __init__
+    self.dataset = pd.read_excel('risorse/dataset/dati da predire.xlsx')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_base.py", line 504, in read_excel
+    io = ExcelFile(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_base.py", line 1580, in __init__
+    self._reader = self._engines[engine](
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\io\excel\_openpyxl.py", line 552, in __init__
+    import_optional_dependency("openpyxl")
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\compat\_optional.py", line 132, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\__init__.py", line 7, in <module>
+    from openpyxl.workbook import Workbook
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\workbook\__init__.py", line 4, in <module>
+    from .workbook import Workbook
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\workbook\workbook.py", line 7, in <module>
+    from openpyxl.worksheet.worksheet import Worksheet
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\worksheet\worksheet.py", line 18, in <module>
+    from openpyxl.utils import (
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\utils\__init__.py", line 4, in <module>
+    from .cell import (
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\utils\cell.py", line 100, in <module>
+    col = _get_column_letter(i)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\openpyxl\utils\cell.py", line 94, in _get_column_letter
+    return ''.join(reversed(letters))
+KeyboardInterrupt
+2023-11-29 17:34:09,159 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:34:09,159 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:36:49,653 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:36:49,654 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:38:42,609 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:38:42,609 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:40:44,897 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    ed = ElaborazioneDati()
+TypeError: 'module' object is not callable
+2023-11-29 17:40:44,898 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:47:11,179 ERROR GestioneDatiPredizioni.py line+57 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    normalizzatore = ElaborazioneDati.normalizzatore
+AttributeError: module 'ElaborazioneDati' has no attribute 'normalizzatore'
+2023-11-29 17:47:11,179 ERROR GestioneDatiPredizioni.py line+69 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 62, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:49:09,845 ERROR GestioneDatiPredizioni.py line+57 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    normalizzatore = ElaborazioneDati.normalizzatore
+AttributeError: module 'ElaborazioneDati' has no attribute 'normalizzatore'
+2023-11-29 17:49:09,845 ERROR GestioneDatiPredizioni.py line+69 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 62, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 17:50:57,105 ERROR GestioneDatiPredizioni.py line+57 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 51, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+AttributeError: 'NoneType' object has no attribute 'transform'
+2023-11-29 17:50:57,107 ERROR GestioneDatiPredizioni.py line+69 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 62, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:13:54,356 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 52, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 580, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 507, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2023-11-29 18:13:54,357 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:17:55,852 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 53, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 580, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 507, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2023-11-29 18:17:55,853 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:19:47,458 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 53, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 580, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 507, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2023-11-29 18:19:47,460 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:44:24,725 ERROR GestioneDatiPredizioni.py line+44 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 38, in __converti_tipologia_dati
+    self.dataset['10_giorni_precedenti_Ultimo'] = pd.to_numeric(self.dataset['10_giorni_precedenti_Ultimo'].str.replace(',', '.'), downcast='float')
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\strings\accessor.py", line 190, in __init__
+    self._inferred_dtype = self._validate(data)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\strings\accessor.py", line 244, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!
+2023-11-29 18:44:24,743 ERROR GestioneDatiPredizioni.py line+59 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 54, in __normalizza_dati
+    self.dataset = pd.DataFrame(normalizzatore.transform(self.dataset), columns=self.dataset.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 580, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 507, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2023-11-29 18:44:24,744 ERROR GestioneDatiPredizioni.py line+71 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 64, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:46:05,520 ERROR GestioneDatiPredizioni.py line+59 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 50, in __normalizza_dati
+    dataframe_train.drop('Unnamed', axis=1, inplace=True)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 5344, in drop
+    return super().drop(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 4711, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 4753, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 6992, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['Unnamed'] not found in axis"
+2023-11-29 18:46:05,529 ERROR GestioneDatiPredizioni.py line+71 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 64, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 18:46:34,523 ERROR GestioneDatiPredizioni.py line+60 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 51, in __normalizza_dati
+    dataframe_train.drop('Unnamed', axis=1, inplace=True)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 5344, in drop
+    return super().drop(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 4711, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\generic.py", line 4753, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 6992, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['Unnamed'] not found in axis"
+2023-11-29 18:46:34,526 ERROR GestioneDatiPredizioni.py line+72 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 65, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 19:09:22,163 ERROR ElaborazioneDati.py line+241 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 226, in __normalizza_dati
+    self.dataframe_train = Normalizzatore.normalizza_dati(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\Normalizzatore.py", line 27, in normalizza_dati
+    return pd.DataFrame(normalizzatore.fit(dataframe), columns=dataframe.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 841, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+2023-11-29 19:10:46,764 ERROR ElaborazioneDati.py line+241 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 226, in __normalizza_dati
+    self.dataframe_train = Normalizzatore.normalizza_dati(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\Normalizzatore.py", line 27, in normalizza_dati
+    return pd.DataFrame(normalizzatore.fit(dataframe), columns=dataframe.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 841, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+2023-11-29 19:11:58,142 ERROR ElaborazioneDati.py line+241 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 226, in __normalizza_dati
+    self.dataframe_train = Normalizzatore.normalizza_dati(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\Normalizzatore.py", line 27, in normalizza_dati
+    dataframe_normalizzato = pd.DataFrame(normalizzatore.fit(dataframe), columns=dataframe.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 841, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+2023-11-29 19:12:04,025 ERROR ReteNeurale.py line+22 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 19, in __init__
+    self.salva_modello()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 76, in salva_modello
+    self.model.save('risorse/modello/model')  # salva il modello completo su file con estensione prefendita keras
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 3103, in save
+    saving_api.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\saving_api.py", line 167, in save_model
+    return legacy_sm_saving_lib.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\save.py", line 168, in save_model
+    saved_model_save.save(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save.py", line 98, in save
+    saved_nodes, node_paths = save_lib.save_and_return_nodes(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1371, in save_and_return_nodes
+    _build_meta_graph(obj, signatures, options, meta_graph_def))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1584, in _build_meta_graph
+    return _build_meta_graph_impl(obj, signatures, options, meta_graph_def)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1495, in _build_meta_graph_impl
+    signatures = signature_serialization.find_function_to_export(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\signature_serialization.py", line 109, in find_function_to_export
+    for name, child in children:
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 189, in list_children
+    for name, child in super(_AugmentedGraphView, self).list_children(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\graph_view.py", line 75, in list_children
+    for name, ref in super(ObjectGraphView,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\trackable_view.py", line 84, in children
+    for name, ref in obj._trackable_children(save_type, **kwargs).items():
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\functional.py", line 460, in _trackable_children
+    dependencies.update(super()._trackable_children(save_type, **kwargs))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 4031, in _trackable_children
+    children = super()._trackable_children(save_type, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\base_layer.py", line 3470, in _trackable_children
+    children = self._trackable_saved_model_saver.trackable_children(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\base_serialization.py", line 61, in trackable_children
+    children = self.objects_to_serialize(serialization_cache)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\layer_serialization.py", line 79, in objects_to_serialize
+    return self._get_serialized_attributes(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\layer_serialization.py", line 106, in _get_serialized_attributes
+    object_dict, function_dict = self._get_serialized_attributes_internal(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\model_serialization.py", line 53, in _get_serialized_attributes_internal
+    default_signature = save_impl.default_save_signature(self.obj)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save_impl.py", line 234, in default_save_signature
+    fn = saving_utils.trace_model_call(layer)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saving_utils.py", line 158, in trace_model_call
+    return _wrapped_model.get_concrete_function(*model_args, **model_kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1227, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1197, in _get_concrete_function_garbage_collected
+    self._initialize(args, kwargs, add_initializers_to=initializers)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 695, in _initialize
+    self._concrete_variable_creation_fn = tracing_compilation.trace_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 272, in _maybe_define_function
+    func_graph = func_graph_module.FuncGraph(tracing_options.name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 163, in __init__
+    def __init__(self,
+KeyboardInterrupt
+2023-11-29 19:14:05,806 ERROR ElaborazioneDati.py line+241 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 226, in __normalizza_dati
+    self.dataframe_train = pd.DataFrame(Normalizzatore.normalizza_dati(self.dataframe_train), columns=self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 841, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+2023-11-29 19:15:49,176 ERROR ElaborazioneDati.py line+244 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 229, in __normalizza_dati
+    self.dataframe_train = pd.DataFrame(train, columns=self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 841, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+2023-11-29 20:55:17,757 ERROR GestioneDatiPredizioni.py line+62 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 55, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 8 into shape (1,1,4)
+2023-11-29 21:28:29,680 ERROR ElaborazioneDati.py line+88 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 81, in __converti_tipologia_dati
+    dataset['Data'] = dataset['data'].apply(self.__converti_data_in_float)  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'data'
+2023-11-29 21:28:29,682 ERROR ElaborazioneDati.py line+111 __crea_serie_temporale_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 94, in __crea_serie_temporale_train
+    serie_temporale = self.dataframe_train.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-29 21:28:29,684 ERROR ElaborazioneDati.py line+88 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 81, in __converti_tipologia_dati
+    dataset['Data'] = dataset['data'].apply(self.__converti_data_in_float)  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'data'
+2023-11-29 21:28:29,684 ERROR ElaborazioneDati.py line+134 __crea_serie_temporale_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 117, in __crea_serie_temporale_validation
+    serie_temporale = self.dataframe_validation.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-29 21:28:29,686 ERROR ElaborazioneDati.py line+88 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 81, in __converti_tipologia_dati
+    dataset['Data'] = dataset['data'].apply(self.__converti_data_in_float)  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'data'
+2023-11-29 21:28:29,686 ERROR ElaborazioneDati.py line+157 __crea_serie_temporale_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 140, in __crea_serie_temporale_test
+    serie_temporale = self.dataframe_test.copy()
+AttributeError: 'NoneType' object has no attribute 'copy'
+2023-11-29 21:28:29,687 ERROR ElaborazioneDati.py line+249 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 234, in __normalizza_dati
+    self.dataframe_train = Normalizzatore.normalizza_dati(self.dataframe_train)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\Normalizzatore.py", line 43, in normalizza_dati
+    dataframe_normalizzato = pd.DataFrame(normalizzatore.transform(dataframe), columns=dataframe.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 930, in check_array
+    raise ValueError(
+ValueError: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2023-11-29 21:28:29,689 ERROR ElaborazioneDati.py line+187 __prepara_dataset_train [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 169, in __prepara_dataset_train
+    X = self.dataframe_train.iloc[:, [0, 2, 3, 4]]
+AttributeError: 'NoneType' object has no attribute 'iloc'
+2023-11-29 21:28:29,689 ERROR ElaborazioneDati.py line+208 __prepara_dataset_validation [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 191, in __prepara_dataset_validation
+    X = self.dataframe_validation.iloc[:, [0, 2, 3, 4]]
+AttributeError: 'NoneType' object has no attribute 'iloc'
+2023-11-29 21:28:29,689 ERROR ElaborazioneDati.py line+229 __prepara_dataset_test [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ElaborazioneDati.py", line 212, in __prepara_dataset_test
+    X = self.dataframe_test.iloc[:, [0, 2, 3, 4]]
+AttributeError: 'NoneType' object has no attribute 'iloc'
+2023-11-29 21:29:30,856 ERROR GestioneDatiPredizioni.py line+48 __converti_tipologia_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 39, in __converti_tipologia_dati
+    self.dataset['Data'] = self.dataset['data'].apply(self.__converti_data_in_float)  # converte la colonna data
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\pandas\core\indexes\base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'data'
+2023-11-29 21:29:30,858 ERROR GestioneDatiPredizioni.py line+58 __normalizza_dati [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 53, in __normalizza_dati
+    self.dataset = Normalizzatore.normalizza_dati(self.dataset)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\Normalizzatore.py", line 43, in normalizza_dati
+    dataframe_normalizzato = pd.DataFrame(normalizzatore.transform(dataframe), columns=dataframe.columns)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 515, in transform
+    X = self._validate_data(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\validation.py", line 795, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+numpy.exceptions.DTypePromotionError: The DType <class 'numpy.dtypes.DateTime64DType'> could not be promoted by <class 'numpy.dtypes.Float64DType'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtypes.DateTime64DType'>, <class 'numpy.dtypes.Float64DType'>, <class 'numpy.dtypes.Float64DType'>, <class 'numpy.dtypes.Float64DType'>, <class 'numpy.dtypes.Float64DType'>)
+2023-11-29 21:29:30,860 ERROR GestioneDatiPredizioni.py line+70 __prepara_dataset_predictions [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\GestioneDatiPredizioni.py", line 63, in __prepara_dataset_predictions
+    V = predict.values.reshape(1, 1,
+ValueError: cannot reshape array of size 5 into shape (1,1,4)
+2023-11-29 23:27:34,279 ERROR ReteNeurale.py line+29 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 22, in __init__
+    self.addestramento()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 65, in addestramento
+    grid_result = grid.fit(self.xtrain, self.ytrain)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 1145, in wrapper
+    estimator._validate_params()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 638, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\utils\_param_validation.py", line 96, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'estimator' parameter of GridSearchCV must be an object implementing 'fit'. Got <bound method ReteNeurale.create_model of <ReteNeurale.ReteNeurale object at 0x000001C0D2A6B2E0>> instead.
+2023-11-29 23:29:01,886 ERROR ReteNeurale.py line+29 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 22, in __init__
+    self.addestramento()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 63, in addestramento
+    grid = GridSearchCV(estimator=self.create_model(), param_grid=param_grid, scoring=scoring, cv=TimeSeriesSplit(n_splits=5))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 53, in create_model
+    self.model.compile(optimizer=optimizer, loss='mean_squared_error')
+AttributeError: 'NoneType' object has no attribute 'compile'
+2023-11-29 23:29:37,106 ERROR ReteNeurale.py line+29 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 22, in __init__
+    self.addestramento()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 65, in addestramento
+    grid_result = grid.fit(self.xtrain, self.ytrain)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\model_selection\_search.py", line 812, in fit
+    base_estimator = clone(self.estimator)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 76, in clone
+    return _clone_parametrized(estimator, safe=safe)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\sklearn\base.py", line 98, in _clone_parametrized
+    raise TypeError(
+TypeError: Cannot clone object '<keras.src.engine.sequential.Sequential object at 0x0000020C39498E50>' (type <class 'keras.src.engine.sequential.Sequential'>): it does not seem to be a scikit-learn estimator as it does not implement a 'get_params' method.
+2023-11-29 23:34:19,514 ERROR ReteNeurale.py line+22 __init__ [MainThread]: errore: 
+Traceback (most recent call last):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 19, in __init__
+    self.salva_modello()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\ReteNeurale.py", line 76, in salva_modello
+    self.model.save('risorse/modello/model')  # salva il modello completo su file con estensione prefendita keras
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\engine\training.py", line 3103, in save
+    saving_api.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\saving_api.py", line 167, in save_model
+    return legacy_sm_saving_lib.save_model(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\save.py", line 168, in save_model
+    saved_model_save.save(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save.py", line 98, in save
+    saved_nodes, node_paths = save_lib.save_and_return_nodes(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1371, in save_and_return_nodes
+    _build_meta_graph(obj, signatures, options, meta_graph_def))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1584, in _build_meta_graph
+    return _build_meta_graph_impl(obj, signatures, options, meta_graph_def)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 1507, in _build_meta_graph_impl
+    saveable_view = _SaveableView(augmented_graph_view, options)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 284, in __init__
+    checkpoint_util.objects_ids_and_slot_variables_and_paths(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\util.py", line 157, in objects_ids_and_slot_variables_and_paths
+    trackable_objects, node_paths = graph_view.breadth_first_traversal()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\graph_view.py", line 124, in breadth_first_traversal
+    return self._breadth_first_traversal()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 155, in _breadth_first_traversal
+    super(_AugmentedGraphView, self)._breadth_first_traversal())
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\graph_view.py", line 128, in _breadth_first_traversal
+    return super(ObjectGraphView, self)._descendants_with_paths()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\trackable_view.py", line 111, in _descendants_with_paths
+    for name, dependency in self.children(current_trackable).items():
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\graph_view.py", line 97, in children
+    for name, ref in self.list_children(obj, **kwargs):
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\saved_model\save.py", line 189, in list_children
+    for name, child in super(_AugmentedGraphView, self).list_children(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\graph_view.py", line 75, in list_children
+    for name, ref in super(ObjectGraphView,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\checkpoint\trackable_view.py", line 84, in children
+    for name, ref in obj._trackable_children(save_type, **kwargs).items():
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\trackable\autotrackable.py", line 115, in _trackable_children
+    fn._list_all_concrete_functions_for_serialization()  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1162, in _list_all_concrete_functions_for_serialization
+    concrete_functions.append(self.get_concrete_function(*args, **kwargs))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1227, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1213, in _get_concrete_function_garbage_collected
+    concrete = tracing_compilation.trace_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 283, in _maybe_define_function
+    concrete_function = _create_concrete_function(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 310, in _create_concrete_function
+    traced_func_graph = func_graph_module.func_graph_from_py_func(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1059, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 598, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save_impl.py", line 632, in wrapper
+    ret = method(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\utils.py", line 190, in wrap_with_training_arg
+    return control_flow_util.smart_cond(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\utils\control_flow_util.py", line 108, in smart_cond
+    return tf.__internal__.smart_cond.smart_cond(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\smart_cond.py", line 53, in smart_cond
+    return true_fn()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\utils.py", line 192, in <lambda>
+    lambda: replace_training_and_call(True),
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\utils.py", line 188, in replace_training_and_call
+    return wrapped_call(*new_args, **new_kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\saving\legacy\saved_model\save_impl.py", line 698, in call_and_return_conditional_losses
+    call_output = layer_call(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\layers\rnn\gru.py", line 670, in call
+    last_output, outputs, runtime, states = self._defun_gru_call(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\layers\rnn\gru.py", line 902, in _defun_gru_call
+    ) = gru_with_backend_selection(**normal_gru_kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\layers\rnn\gru.py", line 1298, in gru_with_backend_selection
+    gru_lstm_utils.function_register(defun_gpu_gru, **params)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\keras\src\layers\rnn\gru_lstm_utils.py", line 274, in function_register
+    concrete_func.add_gradient_functions_to_graph()
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1561, in add_gradient_functions_to_graph
+    self._delayed_rewrite_functions.forward_backward())
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 145, in forward_backward
+    forward, backward = self._construct_forward_backward(num_doutputs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 188, in _construct_forward_backward
+    func_graph_module.func_graph_from_py_func(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1059, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 179, in _backprop_function
+    return gradients_util._GradientsHelper(  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 733, in _GradientsHelper
+    in_grads = _MaybeCompile(grad_scope, op, func_call,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 365, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 734, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\array_grad.py", line 809, in _ReshapeGrad
+    _IndexedSlicesToTensorNoWarning(grad), array_ops.shape(op.inputs[0])),
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 1260, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\array_ops.py", line 688, in shape
+    return shape_internal(input, name, optimize=True, out_type=out_type)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\ops\array_ops.py", line 726, in shape_internal
+    return constant(input_shape.as_list(), out_type, name=name)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\constant_op.py", line 271, in constant
+    return _constant_impl(value, dtype, shape, name, verify_shape=False,
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\constant_op.py", line 286, in _constant_impl
+    const_tensor = ops._create_graph_constant(  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 268, in _create_graph_constant
+    const_tensor = g._create_op_internal(  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 670, in _create_op_internal
+    return super()._create_op_internal(  # pylint: disable=protected-access
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 2652, in _create_op_internal
+    ret = Operation.from_node_def(
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1160, in from_node_def
+    c_op = _create_c_op(g, node_def, inputs, control_input_ops, op_def=op_def)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\SAMSUNG\PycharmProjects\ModelloPredittivoPrezzi S&P500\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1017, in _create_c_op
+    c_op = pywrap_tf_session.TF_FinishOperation(op_desc)
+KeyboardInterrupt
